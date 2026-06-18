@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PROTOTECH — Prototyping Technologies Development Company</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <meta name="description" content="PROTOTECH is Cagayan Valley’s first registered Prototyping Technologies Development Company, offering engineering, prototyping, programming, and tech innovation services in Tuguegarao City, Philippines.">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animations -->
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s ease-out forwards;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  .service-card {
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 1rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all .35s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .service-card:hover {
+    border-color: black;
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px rgba(0,0,0,.15);
+  }
+
+  .service-icon {
+    color: black;
+    transition: transform .3s ease;
+  }
+
+  .service-card:hover .service-icon {
+    transform: scale(1.15);
+  }
+  </style>
+</head>
+
+<body class="bg-white text-black selection:bg-black selection:text-white">
+
+<!-- ================= HEADER ================= -->
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur border-b border-black/10">
+  <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <img src="assets/prototech-logo.png" alt="Prototech Logo" class="h-10">
+      <span class="font-semibold tracking-wide">PROTOTECH</span>
+    </div>
+
+    <!-- Nav -->
+    <ul class="hidden md:flex gap-8 text-sm font-medium">
+<li class="relative group">
+  <!-- About main link -->
+  <a href="#about" class="hover:opacity-70 font-medium">
+    About
+  </a>
+
+  <!-- Dropdown -->
+  <ul class="absolute left-0 mt-3 w-44 bg-white border border-black/10 rounded-xl
+             opacity-0 invisible group-hover:opacity-100 group-hover:visible
+             transition-all duration-200 shadow-lg">
+
+    <li>
+      <a href="mission.html"
+         class="block px-4 py-2 hover:bg-black hover:text-white rounded-t-xl">
+        Mission
+      </a>
+    </li>
+
+    <li>
+      <a href="vision.html"
+         class="block px-4 py-2 hover:bg-black hover:text-white">
+        Vision
+      </a>
+    </li>
+
+    <li>
+      <a href="values.html"
+         class="block px-4 py-2 hover:bg-black hover:text-white rounded-b-xl">
+        Our Values
+      </a>
+    </li>
+
+  </ul>
+</li>
+
+      <li><a href="#projects" class="hover:opacity-70">Project</a></li>
+      <li><a href="#services" class="hover:opacity-70">Services</a></li>
+      <li><a href="#contact" class="hover:opacity-70">Contact Us</a></li>
+    </ul>
+
+    <!-- Social Icons -->
+    <div class="flex gap-3">
+
+<!-- Email (Open Gmail) -->
+<button
+  type="button"
+  onclick="openGmailToPrototech()"
+  class="w-9 h-9 flex items-center justify-center rounded-full border border-black/20 hover:bg-black hover:text-white transition"
+  title="Email PROTOTECH via Gmail">
+
+  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"/>
+    <path d="M22 8l-10 7L2 8"/>
+  </svg>
+</button>
+
+
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/profile.php?id=61567707380766" target="_blank"
+         class="w-9 h-9 flex items-center justify-center rounded-full border border-black/20 hover:bg-black hover:text-white transition">
+        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+          <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-2.9h2V9.7c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2v1.5h2.6l-.4 2.9h-2.2v7A10 10 0 0 0 22 12"/>
+        </svg>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://instagram.com/pro2techofficial" target="_blank"
+         class="w-9 h-9 flex items-center justify-center rounded-full border border-black/20 hover:bg-black hover:text-white transition">
+        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1"/>
+        </svg>
+      </a>
+
+      <!-- TikTok -->
+      <a href="https://tiktok.com/@pro2techofficial" target="_blank"
+         class="w-9 h-9 flex items-center justify-center rounded-full border border-black/20 hover:bg-black hover:text-white transition">
+        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor">
+          <path d="M14 3v4.4c1.2.9 2.6 1.4 4 1.5v2.3c-1.5-.1-2.9-.6-4-1.3v5.1a5.2 5.2 0 1 1-5.2-5.2c.5 0 1 .1 1.4.2v2.4a2.9 2.9 0 1 0 2.9 2.9V3h2.9z"/>
+        </svg>
+      </a>
+    </div>
+
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="relative h-screen flex items-center justify-center text-center">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-cover bg-center"
+       style="background-image:url('assets/prototech-bg.gif')"></div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 px-6 max-w-4xl fade-up text-white">
+    <h1 class="text-4xl md:text-6xl font-extrabold">
+      PROTOTECH
+    </h1>
+
+    <p class="mt-4 text-xl md:text-2xl font-light">
+      Turning Ideas into Reality Through Engineering & Innovation
+    </p>
+
+    <p class="mt-6 text-white/80">
+      Cagayan Valley’s leading and first registered Prototyping Technologies Development Company
+      offering engineering, prototyping, programming, and tech innovation services.
+    </p>
+
+    <a href="#contact"
+       class="inline-block mt-10 bg-white text-black px-8 py-3 rounded-2xl font-semibold hover:bg-white/90 transition">
+      Inquire Now
+    </a>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="max-w-7xl mx-auto px-6 py-24 reveal">
+  <h2 class="text-3xl font-bold">About PROTOTECH</h2>
+
+  <p class="mt-6 text-black/70 max-w-4xl leading-relaxed">
+    PROTOTECH is a Prototyping Technologies Development Company that provides engineering,
+    prototyping, programming, and technology innovation services for students, startups,
+    institutions, and organizations.
+    <br><br>
+    We are proud to be <strong>Cagayan Valley’s leading and very first registered company</strong>
+    offering comprehensive prototyping and tech development services—turning ideas into reality
+    through expert solutions, precision engineering, and hands-on innovation.
+  </p>
+  
+</section>
+
+<!-- ================= MISSION & VISION ================= -->
+<section id="mission-vision" class="border-t border-black/10 py-24 reveal">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid gap-12 md:grid-cols-2">
+
+      <!-- VISION -->
+      <div class="border border-black/10 rounded-2xl p-8 hover:shadow-lg transition">
+        <h3 class="text-2xl font-bold mb-4">Vision</h3>
+        <p class="text-black/70 leading-relaxed">
+          To be the premier company for prototype technology development,
+          empowering aspiring innovators to transform their ideas into
+          high-quality prototypes within a trusted, inspiring, and secure
+          environment.
+        </p>
+      </div>
+
+      <!-- MISSION -->
+      <div class="border border-black/10 rounded-2xl p-8 hover:shadow-lg transition">
+        <h3 class="text-2xl font-bold mb-4">Mission</h3>
+        <p class="text-black/70 leading-relaxed">
+          At <strong>PROTOTECH</strong>, we bring ideas to life by guiding aspiring
+          innovators through the process of developing impactful projects.
+          With a commitment to <strong>innovation, trust, excellence, and education</strong>,
+          we provide a hands-on, reliable platform that bridges theory and real-world
+          application—fostering a generation of skilled, confident creators ready
+          to make an impact across industries.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= OUR VALUES ================= -->
+<section id="values" class="border-t border-black/10 py-24 reveal">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+
+    <!-- LEFT TITLE -->
+    <div>
+      <h2 class="text-4xl font-extrabold leading-tight">
+        Our<br>Values
+      </h2>
+      <p class="mt-4 text-black/60 max-w-sm">
+        The principles that guide how we innovate, engineer, and deliver
+        reliable technology solutions at PROTOTECH.
+      </p>
+    </div>
+
+    <!-- RIGHT VALUES LIST -->
+    <div class="md:col-span-2 space-y-10">
+
+      <!-- 01 -->
+      <div class="border-b border-black/10 pb-8">
+        <div class="flex items-start gap-6">
+          <span class="text-4xl font-extrabold text-black/20">01</span>
+          <div>
+            <h3 class="text-xl font-semibold">Innovation Driven</h3>
+            <p class="mt-2 text-black/70">
+              We continuously explore new technologies and creative approaches
+              to deliver innovative and impactful solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="border-b border-black/10 pb-8">
+        <div class="flex items-start gap-6">
+          <span class="text-4xl font-extrabold text-black/20">02</span>
+          <div>
+            <h3 class="text-xl font-semibold">Precision Engineering</h3>
+            <p class="mt-2 text-black/70">
+              Every project is built with accuracy, discipline, and attention
+              to detail to ensure quality and reliability.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="border-b border-black/10 pb-8">
+        <div class="flex items-start gap-6">
+          <span class="text-4xl font-extrabold text-black/20">03</span>
+          <div>
+            <h3 class="text-xl font-semibold">Customization at the Core</h3>
+            <p class="mt-2 text-black/70">
+              We tailor solutions to fit unique project requirements, ensuring
+              relevance, flexibility, and effectiveness.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="border-b border-black/10 pb-8">
+        <div class="flex items-start gap-6">
+          <span class="text-4xl font-extrabold text-black/20">04</span>
+          <div>
+            <h3 class="text-xl font-semibold">Client-Focused Efficiency</h3>
+            <p class="mt-2 text-black/70">
+              Our processes prioritize client goals, delivering efficient and
+              transparent workflows that respect time and resources.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 -->
+      <div class="border-b border-black/10 pb-8">
+        <div class="flex items-start gap-6">
+          <span class="text-4xl font-extrabold text-black/20">05</span>
+          <div>
+            <h3 class="text-xl font-semibold">Operational Excellence</h3>
+            <p class="mt-2 text-black/70">
+              We uphold strong operational standards to ensure consistency,
+              quality control, and dependable project delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06 -->
+      <div class="border-b border-black/10 pb-8">
+        <div class="flex items-start gap-6">
+          <span class="text-4xl font-extrabold text-black/20">06</span>
+          <div>
+            <h3 class="text-xl font-semibold">Built for Reliability</h3>
+            <p class="mt-2 text-black/70">
+              Our prototypes and systems are designed to perform consistently
+              in real-world and demanding environments.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 07 -->
+      <div class="border-b border-black/10 pb-8">
+        <div class="flex items-start gap-6">
+          <span class="text-4xl font-extrabold text-black/20">07</span>
+          <div>
+            <h3 class="text-xl font-semibold">Future-Proofing</h3>
+            <p class="mt-2 text-black/70">
+              We design with scalability and adaptability in mind, preparing
+              solutions for future technological advancement.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 08 -->
+      <div>
+        <div class="flex items-start gap-6">
+          <span class="text-4xl font-extrabold text-black/20">08</span>
+          <div>
+            <h3 class="text-xl font-semibold">Rapid Iterativity</h3>
+            <p class="mt-2 text-black/70">
+              We embrace fast iteration cycles, enabling continuous testing,
+              learning, and improvement throughout development.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= SCROLL VIDEO ================= -->
+<section class="max-w-7xl mx-auto px-6 py-24 reveal">
+
+  <div class="relative">
+
+    <video
+      id="scrollVideo"
+      class="w-full max-w-4xl mx-auto rounded-2xl shadow-xl object-contain"
+      muted
+      playsinline
+      preload="none"
+      poster="assets/videos/video-poster.jpg"
+    >
+      <source src="assets/videos/prototech-showcase.mp4" type="video/mp4">
+    </video>
+
+    <!-- Tap to Unmute Button -->
+    <button
+      id="unmuteBtn"
+      onclick="toggleMute()"
+      class="absolute bottom-4 right-4 bg-black/70 text-white
+             px-3 py-2 rounded-full flex items-center gap-2
+             text-xs font-medium hover:bg-black transition"
+    >
+      <!-- Speaker Icon -->
+      <svg id="volumeIcon" viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M11 5L6 9H2v6h4l5 4z"/>
+        <path d="M15 9a4 4 0 0 1 0 6"/>
+        <path d="M19 7a7 7 0 0 1 0 10"/>
+      </svg>
+      <span id="unmuteText">Tap to unmute</span>
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- ================= SERVICES ================= --> 
+<section id="services" class="border-t border-black/10 py-24 reveal">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold">Our Services</h2>
+      <p class="mt-4 text-black/70 max-w-2xl">
+        Click a service to explore details and applications.
+      </p>
+    </div>
+
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Arduino -->
+      <a href="services/arduino.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <path d="M8 12h8M12 8v8"/>
+          </svg>
+        </div>
+        <h3>Arduino Programming</h3>
+      </a>
+
+      <!-- Raspberry Pi -->
+      <a href="services/raspberry-pi.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="14" rx="2"/>
+            <path d="M8 20h8"/>
+          </svg>
+        </div>
+        <h3>Raspberry Pi Programming</h3>
+      </a>
+
+      <!-- Artificial Intelligence -->
+      <a href="services/artificial-intelligence.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 3h6v4H9z"/>
+            <path d="M5 7h14v14H5z"/>
+          </svg>
+        </div>
+        <h3>Artificial Intelligence</h3>
+      </a>
+
+      <!-- IoT -->
+      <a href="services/iot.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="2"/>
+            <path d="M4 12a8 8 0 0 1 16 0"/>
+            <path d="M2 12a10 10 0 0 1 20 0"/>
+          </svg>
+        </div>
+        <h3>Internet of Things</h3>
+      </a>
+
+      <!-- Image Processing -->
+      <a href="services/image-processing.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="5" width="18" height="14" rx="2"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <h3>Image Processing</h3>
+      </a>
+
+      <!-- Web App -->
+      <a href="services/web-development.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20"/>
+            <path d="M12 2a15 15 0 0 1 0 20"/>
+          </svg>
+        </div>
+        <h3>Web Application Development</h3>
+      </a>
+
+      <!-- Robotics -->
+      <a href="services/robotics.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="6" y="3" width="12" height="10" rx="2"/>
+            <path d="M4 21v-4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v4"/>
+          </svg>
+        </div>
+        <h3>Robotics</h3>
+      </a>
+
+      <!-- Manuscript -->
+      <a href="services/manuscript.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2h9l5 5v15H6z"/>
+            <path d="M9 12h6M9 16h6"/>
+          </svg>
+        </div>
+        <h3>Manuscript Assistance</h3>
+      </a>
+
+      <!-- 3D Modelling -->
+      <a href="services/modeling.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 22 7 12 12 2 7 12 2"/>
+            <polyline points="2 7 2 17 12 22 22 17 22 7"/>
+          </svg>
+        </div>
+        <h3>3D Modelling & Blueprint Design</h3>
+      </a>
+
+      <!-- Circuit -->
+      <a href="services/circuit.html" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 12h6M16 12h6"/>
+            <rect x="8" y="8" width="8" height="8"/>
+          </svg>
+        </div>
+        <h3>Circuit Diagram Making</h3>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= PROJECT GALLERY ================= -->
+<section id="projects" class="border-t border-black/10 py-24 reveal">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Section Header -->
+    <div class="mb-12">
+      <h2 class="text-3xl font-bold">Project Gallery</h2>
+      <p class="mt-4 text-black/70 max-w-2xl">
+        A selection of engineering, electronics, and prototyping projects developed by
+        <strong>PROTOTECH</strong> in collaboration with students, institutions, and organizations.
+        <br><br>
+        Here are some of our projects. For more project showcases and updates,
+        <a href="https://www.facebook.com/profile.php?id=61567707380766"
+            target="_blank"
+            class="font-medium underline underline-offset-4 hover:no-underline">
+          visit our Facebook page
+        </a>.
+      </p>
+
+    </div>
+
+    <!-- Grid -->
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project1.jpg"
+               alt="Prototype Project 1"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Smart Sanitation System</h3>
+          <p class="mt-2 text-sm text-black/70">
+            A technology-driven solution designed to improve sanitation efficiency through automated control, monitoring, and intelligent system response for cleaner and more sustainable use.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Smart Systems • Automation • Sustainability
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project2.jpg"
+               alt="Prototype Project 2"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Energy-Aware Control Solution</h3>
+          <p class="mt-2 text-sm text-black/70">
+            An innovation-focused system that promotes smarter energy usage by integrating automated control, power management, and intelligent decision-making.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Energy Systems • Automation • Smart Control
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project3.jpg"
+               alt="Prototype Project 3"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Smart Monitoring & Safety System</h3>
+          <p class="mt-2 text-sm text-black/70">
+            A data-driven solution that transforms insights into protection, supporting safer environments through smart monitoring and analysis.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Monitoring • Data Insights • Safety Systems
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project4.jpg"
+               alt="Prototype Project 4"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Smart Mobility Safety System</h3>
+          <p class="mt-2 text-sm text-black/70">
+            A technology-driven solution designed to improve rider safety through monitoring, alerts, and intelligent system response.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Smart Mobility • Safety • Monitoring
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project5.jpg"
+               alt="Prototype Project 5"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Collision Detection System</h3>
+          <p class="mt-2 text-sm text-black/70">
+            A precision-based system built to detect impacts and hazards in real time, supporting faster response and improved safety.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Detection • Sensors • Safety Systems
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project6.jpg"
+               alt="Prototype Project 6"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Environmental Monitoring System</h3>
+          <p class="mt-2 text-sm text-black/70">
+            A smart monitoring solution that tracks environmental conditions and delivers timely alerts to support disaster preparedness and risk reduction.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Environmental Sensors • Monitoring • Alert Systems
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project7.jpg"
+               alt="Prototype Project 7"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Smart Comfort & Power System</h3>
+          <p class="mt-2 text-sm text-black/70">
+            A dual-purpose system designed to provide user comfort while supplying reliable power through efficient energy management.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Comfort • Energy • Smart Systems
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project8.jpg"
+               alt="Prototype Project 8"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Smart Security Alert System</h3>
+          <p class="mt-2 text-sm text-black/70">
+            A real-time alert solution developed to detect unauthorized access and instantly notify users for faster response and improved security.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Security • Alerts • Monitoring
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project9.jpg"
+               alt="Prototype Project 9"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Intelligent Water Management System</h3>
+          <p class="mt-2 text-sm text-black/70">
+            A smart solution developed to optimize water usage and service delivery through controlled distribution, monitoring, and efficient system design.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Water Systems • Smart Technology • System Design
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project10.jpg"
+               alt="Prototype Project 10"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Smart Signal & Power System</h3>
+          <p class="mt-2 text-sm text-black/70">
+            A technology solution that converts signals and frequencies into reliable power and intelligent system performance.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Signal Processing • Power Systems • Innovation
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project11.jpg"
+               alt="Prototype Project 11"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Digital Attendance & Logging System</h3>
+          <p class="mt-2 text-sm text-black/70">
+            A smart system designed to record presence and activity accurately, improving tracking, accountability, and data clarity.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Digital Records • Monitoring • Smart Systems
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project12.jpg"
+               alt="Prototype Project 12"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Solar-Powered Pest Control System</h3>
+          <p class="mt-2 text-sm text-black/70">
+            An eco-friendly solution designed to manage pests using solar energy and controlled trapping for safer and more sustainable protection.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Solar Energy • Pest Control • Sustainable Design
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project13.jpg"
+               alt="Prototype Project 13"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Innovation for the Community</h3>
+          <p class="mt-2 text-sm text-black/70">
+            Creating technology that empowers people, supports inclusion, and strengthens communities through meaningful innovation.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Community • Inclusion • Innovation
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project14.jpg"
+               alt="Prototype Project 14"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Technology with Purpose</h3>
+          <p class="mt-2 text-sm text-black/70">
+            Designing solutions that focus on people—built to be inclusive, practical, and impactful.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Human-Centered • Inclusive • Smart Design
+          </span>
+        </div>
+      </div>
+
+      <!-- Project Card -->
+      <div class="group border border-black/10 rounded-2xl overflow-hidden hover:shadow-xl transition">
+        <div class="aspect-video overflow-hidden">
+          <img src="assets/projects/project15.jpg"
+               alt="Prototype Project 15"
+               class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-lg">Innovation for the Future</h3>
+          <p class="mt-2 text-sm text-black/70">
+            Developing smart solutions that connect, sustain, and move communities forward.
+          </p>
+          <span class="inline-block mt-3 text-xs font-medium border border-black/20 px-3 py-1 rounded-full">
+            Sustainable • Connected • Future-Ready
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="border-t border-black/10 py-24 reveal">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+
+    <div>
+      <h2 class="text-3xl font-bold">Let’s Build Your Idea</h2>
+      <p class="mt-4 text-black/70">
+        Ready to bring your idea to life? Let’s talk.
+      </p>
+      <p class="mt-2 text-black/70">
+        📧 pro2techofficial@gmail.com
+      </p>
+    </div>
+
+    <form class="border border-black/10 rounded-2xl p-6 space-y-4"
+          onsubmit="sendMail(event)">
+
+      <input id="contactName" name="name" required placeholder="Name"
+            class="w-full border border-black/20 px-3 py-2 rounded-xl">
+
+      <input id="contactEmail" name="email" type="email" required placeholder="Email"
+            class="w-full border border-black/20 px-3 py-2 rounded-xl">
+
+      <textarea id="contactMessage" name="message" required rows="5" placeholder="Project details"
+                class="w-full border border-black/20 px-3 py-2 rounded-xl"></textarea>
+
+      <button class="bg-black text-white px-6 py-3 rounded-2xl font-semibold hover:bg-black/90">
+        Send Inquiry
+      </button>
+    </form>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-black/10 py-10 text-sm text-black/60">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+    <!-- Left: Logo + Copyright -->
+    <div class="flex items-center gap-3">
+      <img src="assets/prototech-logo.png" class="h-8" alt="Prototech Logo">
+      <span>© 2024 PROTOTECH</span>
+    </div>
+
+    <!-- Right: Map Icon + Address -->
+    <div class="flex items-center gap-4">
+
+      <!-- Clickable Map Icon -->
+      <a
+        href="https://maps.app.goo.gl/Qhzivt2Dv3ZgvDRa8"
+        target="_blank"
+        title="View PROTOTECH location on Google Maps"
+        class="flex items-center gap-2 hover:opacity-70 transition"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          class="w-5 h-5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+        <span>View on Map</span>
+      </a>
+
+      <!-- Address -->
+      <span>Caritan Norte, Tuguegarao City, Cagayan, Philippines 3500</span>
+
+    </div>
+
+  </div>
+</footer>
+
+
+
+<!-- ================= JS: Scroll Reveal ================= -->
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  window.addEventListener('scroll', () => {
+    reveals.forEach(r => {
+      const top = r.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) {
+        r.classList.add('active');
+      }
+    });
+  });
+
+  function sendMail(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("contactName").value.trim();
+    const email = document.getElementById("contactEmail").value.trim();
+    const message = document.getElementById("contactMessage").value.trim();
+
+    const gmailURL =
+      "https://mail.google.com/mail/?view=cm&fs=1" +
+      "&to=pro2techofficial@gmail.com" +
+      "&su=" + encodeURIComponent("PROTOTECH Website Inquiry") +
+      "&body=" + encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\n\nInquiry:\n${message}\n\n---\nSent via PROTOTECH WEBSITE`
+      );
+
+    window.open(gmailURL, "_blank");
+  }
+</script>
+
+
+<script>
+  function openGmailToPrototech() {
+    const to = "pro2techofficial@gmail.com";
+    const subject = encodeURIComponent("Email PROTOTECH via Gmail");
+    const body = "";
+
+    const url =
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+
+    window.open(url, "_blank");
+  }
+</script>
+
+<script>
+  const scrollVideo = document.getElementById("scrollVideo");
+
+  if (scrollVideo) {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          scrollVideo.play();
+        } else {
+          scrollVideo.pause();
+        }
+      },
+      {
+        threshold: 0.4
+      }
+    );
+
+    observer.observe(scrollVideo);
+  }
+</script>
+
+<script>
+  function toggleMute() {
+    const video = document.getElementById("scrollVideo");
+    const text = document.getElementById("unmuteText");
+    const icon = document.getElementById("volumeIcon");
+
+    if (!video) return;
+
+    video.muted = !video.muted;
+
+    if (video.muted) {
+      text.textContent = "Tap to unmute";
+      icon.innerHTML = `
+        <path d="M11 5L6 9H2v6h4l5 4z"/>
+        <path d="M15 9a4 4 0 0 1 0 6"/>
+        <path d="M19 7a7 7 0 0 1 0 10"/>
+      `;
+    } else {
+      text.textContent = "Mute";
+      icon.innerHTML = `
+        <path d="M11 5L6 9H2v6h4l5 4z"/>
+        <line x1="23" y1="1" x2="1" y2="23"/>
+      `;
+    }
+  }
+</script>
+
+
+</body>
+</html>

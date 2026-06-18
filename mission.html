@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mission | PROTOTECH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
+  <meta name="description" content="PROTOTECH Mission — guiding aspiring innovators in developing impactful, real-world technology projects.">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Animation -->
+  <style>
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease-out forwards;
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-black min-h-screen flex flex-col selection:bg-black selection:text-white">
+
+<!-- ================= HEADER ================= -->
+<header class="sticky top-0 z-50 bg-white border-b border-black/10">
+  <nav class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-3">
+      <img src="assets/prototech-logo.png" alt="Prototech Logo" class="h-9">
+      <span class="font-semibold tracking-wide">PROTOTECH</span>
+    </a>
+
+    <!-- Back -->
+    <a href="index.html#about" class="text-sm hover:opacity-70">
+      ← Back to Home
+    </a>
+
+  </nav>
+</header>
+
+<!-- ================= CONTENT ================= -->
+<main class="flex-grow">
+    
+<section class="max-w-5xl mx-auto px-6 py-24 fade-up">
+  <h1 class="text-4xl font-bold mb-8">Our Mission</h1>
+
+  <p class="text-black/70 leading-relaxed text-lg">
+    At <strong>PROTOTECH</strong>, we bring ideas to life by guiding aspiring
+    innovators through the process of developing impactful projects.
+    <br><br>
+    With a commitment to <strong>innovation, trust, excellence, and education</strong>,
+    we provide a hands-on, reliable platform that bridges theory and real-world
+    application—fostering a generation of skilled, confident creators ready
+    to make an impact across industries.
+  </p>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-black/10 py-10 text-sm text-black/60">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="flex items-center gap-3">
+      <img src="assets/prototech-logo.png" class="h-8" alt="Prototech Logo">
+      <span>© 2025 PROTOTECH</span>
+    </div>
+    <span>Caritan Norte, Tuguegarao City, Cagayan, Philippines 3500</span>
+  </div>
+</footer>
+
+</body>
+</html>
